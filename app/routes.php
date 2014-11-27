@@ -23,12 +23,4 @@ Route::get('/login',array('as' => 'login', 'uses' => 'AuthController@getLogin'))
 Route::post('logindone',array('uses' => 'AuthController@postLogin'));
 //->before('csrf');
 
-Route::group(array('before' => 'auth'), function() {
-
-   
-    Route::get('/logout', array(
-        'as' => 'logout',
-        'uses' => 'HomeController@getSignOut'
-    ));
-
-});
+Route::get('/logout',array('as' => 'logout', 'uses' => 'HomeController@getLogOut'));

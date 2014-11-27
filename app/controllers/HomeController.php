@@ -34,7 +34,7 @@ class HomeController extends BaseController {
 		// echo $id;
 	}
 
-	public function getSignOut()
+	public function getLogOut()
 	{
 		Auth::logout(); // log the user out of our application
 		return Redirect::route('login'); // redirect the user to the login screen

@@ -25,8 +25,8 @@ class AuthController extends Controller{
 				));
 		}
 		
-
-		return Redirect::route('home');
+		$login_check=True;
+		return Redirect::route('home',compact('$login_check'));
 
 	}
 }
