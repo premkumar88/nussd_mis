@@ -20,10 +20,17 @@
                 <li>
                     <a href="#">Contact Us</a>
                 </li>
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#myModal">Login</a>
-                </li>
-            </ul>
+
+                @if(Auth::check())
+                    <li>
+                        <a href="logout">Logout</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Login</a>
+                    </li>
+                @endif
+               </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>

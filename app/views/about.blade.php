@@ -1,5 +1,8 @@
 @section('content')
 
-   This is about Page
-    
+ <div class="main-padding">
+
+
+</div>
+
 @stop
